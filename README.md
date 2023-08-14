@@ -57,5 +57,5 @@ We then used the function .head() to see the first 5 rows of our dataset and exp
 It's very important that our model is general and not overfitting on this particular dataset. It's important that it can predict the digit from any image we give it not just the training images and that's why, to avoid overfitting, we have to set aside a chunck of the dataset (cross validation data or dev) that the model will not train on and we will use it to test the hyperparameters and performance on this data. 
 
 
-side note: in the video, the instructor explained that a layer is called a layer when it has parameters and that's why he called the input layer 0th layer because it doesn't really have any parameters so it's not really a layer. 
+side note: in the video, the instructor explained that a layer is called a layer when it has parameters and that's why he called the input layer 0th layer because it doesn't really have any parameters so it's not really a layer.
 This project is an implementation to this video https://www.youtube.com/watch?v=w8yWXqWQYmU by Samson Zhang.
