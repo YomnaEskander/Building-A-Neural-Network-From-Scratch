@@ -42,7 +42,19 @@ The output layer needs to output probabilities and softmax does this. Each of th
 <h5>The forward pass is not enough because we need to optimize the weights and biases so that the predictions are better and more accurate so machine learning gives us the opprotunity to teach our model these weights and biases so that it reaches the optimial one which will be doen using backprobagation.</h5> 
 
 <h3>Backprobagation</h3>
+Why backpropagation and what is it? Well, for a model to perform well and give goof results, we need weights and biases that are optimal. The thing about neural networks is that they learn the weights this happens through an algorithm that is ran several times which is backpropagation. 
 
+We start with the prediciton and then see how different is the outcome from the label this will give the error, we need to decrese the error as much as we can so we have to see how much each of the previous weights have created this error, this will help adjust the weights accordingly for better performance and results. the result of backpropagation is how much each parameter has contributed to the error. We then update the parameters accordingliy. One important note is that the learning rate is not trained by the model, it is a hyperparameter. 
+
+After updating the parameter we go through all the steps again. Everytime we change the parameters a tiny bit to get closer to the label or actual truth. 
+
+# The code
+
+Imported the Numpy and Pandas libraries which are two crucial and famous libs in python. Numpy is for all the math and Pandas is for manipulating the dataset and working with data in general. 
+
+We then used the function .head() to see the first 5 rows of our dataset and explore it. 
+
+It's very important that our model is general and not overfitting on this particular dataset. It's important that it can predict the digit from any image we give it not just the training images and that's why, to avoid overfitting, we have to set aside a chunck of the dataset (cross validation data or dev) that the model will not train on and we will use it to test the hyperparameters and performance on this data. 
 
 
 side note: in the video, the instructor explained that a layer is called a layer when it has parameters and that's why he called the input layer 0th layer because it doesn't really have any parameters so it's not really a layer. 
